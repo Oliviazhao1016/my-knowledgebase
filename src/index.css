@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #050505;
+  --color-surface: #121212;
+  --color-surface-hover: #1a1a1a;
+  --color-primary: #32CD32;
+  --color-primary-glow: rgba(50, 205, 50, 0.4);
+  --color-text: #F3F4F6;
+  --color-text-muted: #9CA3AF;
+  --color-border: #27272A;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(18, 18, 18, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .glow-border {
+    box-shadow: 0 0 0 1px var(--color-border), 0 0 20px -10px var(--color-primary-glow);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .glow-border:hover {
+    box-shadow: 0 0 0 1px var(--color-primary), 0 0 30px -5px var(--color-primary-glow);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(to right, #ffffff, var(--color-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
