@@ -5,7 +5,7 @@ import { useStore } from '../../store/useStore';
 import { cn } from '../../lib/utils';
 
 export const AssistantSidebar = () => {
-  const { chatMessages, addChatMessage, viewState, setAssistantOpen, isAssistantLoading, setAssistantLoading } = useStore();
+  const { chatMessages, addChatMessage, setAssistantOpen, isAssistantLoading, setAssistantLoading } = useStore();
   const [input, setInput] = useState('');
   const endRef = useRef<HTMLDivElement>(null);
 

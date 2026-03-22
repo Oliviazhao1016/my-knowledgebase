@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { FileUp, Link2, Send, Plus, Loader2 } from 'lucide-react';
+import { Send, Plus, Loader2 } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { useStore } from '../../store/useStore';
 
